@@ -1,6 +1,6 @@
 # change log
 
-date : Sabtu, 13 Januari 2018
+## date : Sabtu, 13 Januari 2018
 21 files changed, 1466 insertions(+)
 
 create mode 100644 CHANGELOG.md
