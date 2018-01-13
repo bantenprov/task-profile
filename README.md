@@ -1,2 +1,2 @@
-# task-profile
+# Task Profile
 User Profile for Task Management
