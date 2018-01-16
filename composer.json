@@ -1,33 +1,17 @@
 {
     "name": "bantenprov/task-profile",
-    "description": "User profile in for task management",
-    "type": "library",
-    "homepage": "https://github.com/bantenprov/task-profile",
-    "authors": [{
-        "name": "bantenprov",
-        "email": "developer.bantenprov@gmail.com",
-        "role": "developer"
-    }],
-    "license": "MIT",
-    "support": {
-      "source": "https://github.com/bantenprov/task-profile,",
-      "issues": "https://github.com/bantenprov/task-profile/issues",
-      "wiki": "https://github.com/bantenprov/task-profile/wiki"
-    },
+    "description": "The TaskProfile package",
+    "authors": [
+        {
+            "name": "bantenprov",
+            "email": "developer.bantenprov@gmail.com"
+        }
+    ],
     "require": {
         "php": ">=5.6.4",
-        "laravel/framework": "5.4.*",
-        "laravel/tinker": "~1.0"
-    },
-    "require-dev": {
-        "fzaninotto/faker": "~1.4",
-        "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "~5.7"
+        "illuminate/support": "5.4.*"
     },
     "autoload": {
-        "classmap": [
-            "database"
-        ],
         "files": [
             "src/helpers/helpers.php"
         ],
@@ -35,24 +19,5 @@
             "Bantenprov\\TaskProfile\\": "src"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
-        }
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "Illuminate\\Foundation\\ComposerScripts::postInstall",
-            "php artisan optimize"
-        ],
-        "post-update-cmd": [
-            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
-            "php artisan optimize"
-        ]
-    },
-    "config": {
-        "preferred-install": "dist",
-        "sort-packages": true,
-        "optimize-autoloader": true
-    }
+    "minimum-stability": "stable"
 }
