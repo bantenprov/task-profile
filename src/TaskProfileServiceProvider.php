@@ -2,7 +2,7 @@
 
 use Illuminate\Support\ServiceProvider;
 use Bantenprov\TaskProfile\Console\Commands\TaskProfileCommand;
-
+use File;
 /**
  * The TaskProfileServiceProvider class
  *
@@ -122,7 +122,7 @@ class TaskProfileServiceProvider extends ServiceProvider
         //$this->loadViewsFrom($packageViewsPath, 'task-profile');
 
         $this->publishes([
-            $packageViewsPath => resource_path('views/'),
+            $packageViewsPath => resource_path('views'),
         ], 'profile-views');
     }
 
@@ -160,8 +160,9 @@ class TaskProfileServiceProvider extends ServiceProvider
     {                     
 
         $this->publishes([
-            File::put(base_path('app/Http/Controllers/UserProfileController.php'),File::get(__DIR__.'/stubs/controllers/TaskProfileController.stub'))
+            //File::put(base_path('app/Http/Controllers/UserProfileController.php'),File::get(__DIR__.'/stubs/controllers/UserProfileController.stub'))
         ], 'profil-controller');
         
     }
 }
+
